@@ -88,17 +88,15 @@ while iteration < 5:
     iteration += 1
 
 """
-Les fonctions
+Les chaines de caractères
 """
 
-#fonction qui ne prend aucun paramètre
-def do_nothing():
-    pass
+#opérations
 
-#fonction avec plusieurs paramètres
-def imprimer_somme(op1: float, op2: float) -> None:
-    print(op1 + op2)
+#obtenir caractère, len
+#upper, lower
+#concaténation, substring
 
-#fonction avec plusieurs paramètres et une valeur de retour
-def somme(op1: float, op2: float) -> float:
-    return op1 + op2
+#formatted strings
+#raw strings
+#multiline
