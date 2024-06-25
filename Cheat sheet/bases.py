@@ -86,17 +86,3 @@ iteration = 0
 while iteration < 5:
     print("Loop:", iteration)
     iteration += 1
-
-"""
-Les chaines de caractères
-"""
-
-#opérations
-
-#obtenir caractère, len
-#upper, lower
-#concaténation, substring
-
-#formatted strings
-#raw strings
-#multiline

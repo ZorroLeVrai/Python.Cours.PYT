@@ -45,6 +45,29 @@ print(mon_dico.items())     #dict_items([(1, 'Un'), (2, 'Deux'), (3, 'Trois'), (
 for cle, valeur in mon_dico.items():
     print(f"{cle} -> {valeur}")
 
+
+"""
+Utilisation de fonctions lambda en paramétre des fonction `map`, `filter` et `reduce`
+"""
+
+# fonction de projection (map)
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = list(map(lambda x: x ** 2, numbers))
+print(squared_numbers)  # [1, 4, 9, 16, 25]
+
+# fonction de filtre (filter)
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)     # [2, 4, 6, 8, 10]
+
+# fonction d'aggrégation reduce
+import functools
+
+numbers = [1, 2, 3, 4, 5]
+product_value = functools.reduce(lambda x, y: x * y, numbers)
+print(f"{product_value=}")    # 120
+
+
 """
 Les tableaux
 """
