@@ -54,4 +54,3 @@ def ma_fonction_range(initial_value: int, max_value_excluded: int, step: int):
         current_value += step
 
 print(list(ma_fonction_range(1, 10, 2)))    #[1, 3, 5, 7, 9]
-
