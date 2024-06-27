@@ -40,6 +40,7 @@ def print_factorization(factors: list[int]):
     print(" * ".join(formated_factors))
 
 
-number_to_factorize = int(input("Entrez un nombre: "))
-nombre_factorise = factorize(number_to_factorize)
-print_factorization(nombre_factorise)
+if __name__ == "__main__":
+    number_to_factorize = int(input("Entrez un nombre: "))
+    nombre_factorise = factorize(number_to_factorize)
+    print_factorization(nombre_factorise)
