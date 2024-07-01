@@ -1,43 +1,25 @@
-message_saisie = "Veuillez entrer une note entre 0 et 20 compris (une note négative stoppera la saisie): "
+import os.path
+import csv
 
-def saisir_une_note():
-    while True:
-        note_str = input(message_saisie)
-        try:
-            note = float(note_str)
-            if note > 20:
-                print("Veuillez saisir un nombre inférieur ou égal à 20")
-            else:
-                return note
-        except ValueError:
-            print("Veuillez saisir un nombre entier ou un nombre décimal")
+nom_fichier = "produit.csv"
+delimiteur_csv = ";"
+nom_titre = "Nom du produit"
+prix_titre = "Prix"
+stock_titre = "Quantité du stock"
 
 
-def saisir_notes():
-    note_minimale = 20
-    note_maximale = 0
-    somme_notes = 0
-    nb_notes = 0
+def ajouter_produit(nom, prix, stock):
+    """Commentaire Python"""
+    fichier_existe = os.path.exists(nom_fichier)
 
-    while True:
-        note = saisir_une_note()
-        if note < 0:
-            break
+    with open(nom_fichier, "at", newline="", encoding="latin1") as fichier:
+        csv_writer = csv.writer(fichier, delimiter=delimiteur_csv)
+        if not fichier_existe:
+            csv_writer.writerow([nom_titre, prix_titre, stock_titre])
+        csv_writer.writerow([nom, prix, stock])
 
-        if note < note_minimale:
-            note_minimale = note
+nom = input("Entrez le nom du produit: ")
+prix = float(input("Entrez le prix du produit: "))
+stock = int(input("Entrer le nombre de produits: "))
 
-        if note > note_maximale:
-            note_maximale = note
-        
-        somme_notes += note
-        nb_notes += 1
-
-    moyenne = somme_notes / nb_notes if nb_notes > 0 else 0
-    return (note_minimale, note_maximale, moyenne)
-
-
-(note_min, note_max, moyenne) = saisir_notes()
-print(f"La note minimale est de {note_min} / 20")
-print(f"La note maximale est de {note_max} / 20")
-print(f"La moyenne est de {moyenne} / 20")
+ajouter_produit(nom, prix, stock)
