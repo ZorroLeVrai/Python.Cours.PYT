@@ -1,3 +1,4 @@
+import re
 from functools import reduce
 
 nom_fichier = "texte.txt"
@@ -18,8 +19,10 @@ def get_nb_occurence_dict(text: str) -> dict[str, int]:
         return accumulator
 
 
-    words = text.split()
-    return reduce(add_word, words, dict())
+    words: list[str] = re.split("[ ,;.\n]", text)
+    empty_words_filtered = filter(lambda w: w, words)
+    small_letters_words = map(lambda w: w.lower(), empty_words_filtered)
+    return reduce(add_word, small_letters_words, dict())
 
 
 texte = lire_fichier(nom_fichier)
