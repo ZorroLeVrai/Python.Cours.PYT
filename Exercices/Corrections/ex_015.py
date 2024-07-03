@@ -8,7 +8,7 @@ prix_titre = "Prix"
 stock_titre = "Quantité du stock"
 
 
-def ajouter_produit(nom, prix, stock):
+def ajouter_produit(nom: str, prix: float, stock: int):
     """Commentaire Python"""
     fichier_existe = os.path.exists(nom_fichier)
 
