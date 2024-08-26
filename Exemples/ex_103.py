@@ -1,12 +1,7 @@
-def add(a, b):
-    """
-    Additionne deux nombres et renvoie le résultat.
-
-    Paramètres:
-    a (float): Le premier nombre.
-    b (float): Le second nombre.
-
-    Retourne:
-    float: La somme des deux nombres.
-    """
-    return a + b
+nom_fichier = "mon_fichier.txt"
+with open(nom_fichier, 'r') as fichier:
+    # Lire tout le contenu du fichier
+    contenu = fichier.read()
+    # Afficher le contenu
+    print(contenu)
+# Appel de fichier.close() automatiquement à la fin du bloc with
