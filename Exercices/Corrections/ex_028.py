@@ -1,4 +1,4 @@
-from typing import Union, Self
+from typing import Union
 
 
 class IntervalError(Exception):
