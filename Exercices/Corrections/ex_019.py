@@ -1,5 +1,4 @@
 import sys
-from collections.abc import Iterator
 
 def generateur_alphabet(est_majuscule: bool) -> str:
     resultat = ""
@@ -8,13 +7,15 @@ def generateur_alphabet(est_majuscule: bool) -> str:
         resultat += chr(ascii_char)
     return resultat
 
-if len(sys.argv) < 2:
-    raise RuntimeError("Vous devez spécifier un argument à ce programme")
 
-match sys.argv[1]:
-    case "minuscule":
-        print(generateur_alphabet(False))
-    case "majuscule":
-        print(generateur_alphabet(True))
-    case _:
-        raise RuntimeError("Argument inconnu")
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        raise RuntimeError("Vous devez spécifier un argument à ce programme")
+
+    match sys.argv[1]:
+        case "minuscule":
+            print(generateur_alphabet(False))
+        case "majuscule":
+            print(generateur_alphabet(True))
+        case _:
+            raise RuntimeError("Argument inconnu")

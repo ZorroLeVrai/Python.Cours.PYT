@@ -18,8 +18,10 @@ def ajouter_produit(nom: str, prix: float, stock: int):
             csv_writer.writerow([nom_titre, prix_titre, stock_titre])
         csv_writer.writerow([nom, prix, stock])
 
-nom = input("Entrez le nom du produit: ")
-prix = float(input("Entrez le prix du produit: "))
-stock = int(input("Entrer le nombre de produits: "))
 
-ajouter_produit(nom, prix, stock)
+if __name__ == "__main__":
+    nom = input("Entrez le nom du produit: ")
+    prix = float(input("Entrez le prix du produit: "))
+    stock = int(input("Entrer le nombre de produits: "))
+
+    ajouter_produit(nom, prix, stock)

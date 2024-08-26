@@ -37,7 +37,8 @@ def saisir_notes() -> tuple[float, float, float]:
     return (note_minimale, note_maximale, moyenne)
 
 
-(note_min, note_max, moyenne) = saisir_notes()
-print(f"La note minimale est de {note_min} / 20")
-print(f"La note maximale est de {note_max} / 20")
-print(f"La moyenne est de {moyenne} / 20")
+if __name__ == "__main__":
+    (note_min, note_max, moyenne) = saisir_notes()
+    print(f"La note minimale est de {note_min} / 20")
+    print(f"La note maximale est de {note_max} / 20")
+    print(f"La moyenne est de {moyenne} / 20")

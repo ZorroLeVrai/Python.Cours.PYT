@@ -18,4 +18,5 @@ def fonction_base() -> None:
 # def simuler_decorateur() -> None:
 #     decorer_fonction(fonction_base)()
 
-fonction_base_decoree()
+if __name__ == "__main__":
+    fonction_base_decoree()

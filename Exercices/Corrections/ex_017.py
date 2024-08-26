@@ -42,24 +42,26 @@ def choix_option() -> int:
         except ValueError:
             print("L'option doit être un entier")
 
-while True:
-    option = choix_option()
 
-    match option:
-        case 0:
-            print("Fin du programme")
-            break
-        case 1:
-            print(deco_text("LISTE NOMS DE FAMILLE"))
-            afficher_liste_noms()
-        case 2:
-            print(deco_text("AJOUTER UN NOM DE FAMILLE"))
-            ajouter_nom_famille()
-        case 3:
-            print(deco_text("EDITER UN NOM DE FAMILLE"))
-            editer_nom_famille()
-        case 4:
-            print(deco_text("SUPPRIMER UN NOM DE FAMILLE"))
-            supprimer_nom_famille()
-        case _:
-            print("Option non valide")
+if __name__ == "__main__":
+    while True:
+        option = choix_option()
+
+        match option:
+            case 0:
+                print("Fin du programme")
+                break
+            case 1:
+                print(deco_text("LISTE NOMS DE FAMILLE"))
+                afficher_liste_noms()
+            case 2:
+                print(deco_text("AJOUTER UN NOM DE FAMILLE"))
+                ajouter_nom_famille()
+            case 3:
+                print(deco_text("EDITER UN NOM DE FAMILLE"))
+                editer_nom_famille()
+            case 4:
+                print(deco_text("SUPPRIMER UN NOM DE FAMILLE"))
+                supprimer_nom_famille()
+            case _:
+                print("Option non valide")
