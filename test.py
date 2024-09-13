@@ -1,5 +1,9 @@
-class Nom_Classe_Parent:
-    pass
+adresse = "Puteaux"
+texte = f"""Début "{adresse}" 
+'{adresse}' Fin"""
 
-class Nom_Classe_Enfant(Nom_Classe_Parent):
-    pass
+
+txt1 = "texte"
+txt1 = 'texte'
+txt1 = """texte"""
+print(texte)
