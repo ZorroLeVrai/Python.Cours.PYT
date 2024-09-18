@@ -9,4 +9,6 @@ base_cm2 = math.pi*rayon_cm**2
 volume_cm3 = hauteur_cm*base_cm2 / 3
 
 #Affchage du résultat
-print(f"Le volume est de {round(volume_cm3, 2)} cm\u00b3")
+print("Le volume est de (en centimètres cubes):", volume_cm3)
+
+#print(f"Le volume est de {round(volume_cm3, 2)} cm\u00b3")

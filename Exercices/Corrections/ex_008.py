@@ -7,4 +7,4 @@ while epaisseur_actuelle <= epaisseur_cible_mm:
     epaisseur_actuelle *= 2
     nombre_de_plis += 1
 
-print(f"Nombre de plis nécessaires: {nombre_de_plis}")
+print("Nombre de plis nécessaires:", nombre_de_plis)
