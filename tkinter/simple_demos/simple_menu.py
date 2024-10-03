@@ -10,7 +10,9 @@ root.geometry(f"{WIDTH}x{HIGHT}")
 root.title(TITLE)
 
 def on_closing():
-    root.destroy()
+    if messagebox.askyesno(title="Quit?", message="Do you really want to quit ?"):
+        #Close the Window
+        root.destroy()
 
 def show_message():
     messagebox.showinfo(title="Message", message="Message à afficher")
