@@ -1,3 +1,6 @@
+if __name__ != "__main__":
+    exit()
+
 try:
     # Demander à l'utilisateur d'entrer un nombre
     nombre = int(input("Entrez un nombre : "))

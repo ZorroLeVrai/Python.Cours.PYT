@@ -1,6 +1,9 @@
 #Rechercher des numéro de téléphone au format "XXX-XXX-XXXX"
 import re
 
+if __name__ != "__main__":
+    exit()
+
 # Définir une chaîne de caractères
 text = "Mon numéro de téléphone est 123-456-7890."
 

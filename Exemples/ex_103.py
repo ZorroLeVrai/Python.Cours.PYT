@@ -1,3 +1,7 @@
+if __name__ != "__main__":
+    exit()
+
+
 nom_fichier = "mon_fichier.txt"
 with open(nom_fichier, 'r') as fichier:
     # Lire tout le contenu du fichier

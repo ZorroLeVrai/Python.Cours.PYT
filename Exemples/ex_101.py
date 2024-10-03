@@ -1,6 +1,9 @@
 #Récupération des arguments passés en ligne de commandes
 import sys
 
+if __name__ != "__main__":
+    exit()
+
 if len(sys.argv) < 3:
     raise TypeError("Pas assez d'arguments. Vous devez avoir au moins 2 arguments")
 
