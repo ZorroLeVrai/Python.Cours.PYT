@@ -25,7 +25,7 @@ def deplacer_fichier_dans_tests(file_paths, target_dir):
         
         # Déplacement du fichier
         os.rename(file_path, dest_path)
-        print(f"Déplacement de {file_name} vers {tests_dir}")
+        print(f"Déplacement du fichier {file_name} vers {tests_dir}")
 
 
 # Utiliser glob pour trouver tous les fichiers correspondant au modèle "villes_*.csv"
