@@ -1,7 +1,7 @@
 import os
 
 # Chemin du répertoire source
-source_dir = 'Repertoire'
+source_dir = r"..\Repertoire"
 
 # Créer le répertoire 'tests' s'il n'existe pas
 tests_dir = os.path.join(source_dir, 'tests')
