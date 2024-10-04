@@ -31,4 +31,4 @@ def deplacer_fichier_dans_tests(file_paths, target_dir):
 # Utiliser glob pour trouver tous les fichiers correspondant au modèle "villes_*.csv"
 fichiers_a_deplacer = glob.glob(os.path.join(repertoire_source, format_fichiers_source))
 
-deplacer_fichier_dans_tests(fichiers_a_deplacer)
+deplacer_fichier_dans_tests(fichiers_a_deplacer, repertoire_cible)
