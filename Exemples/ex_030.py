@@ -14,4 +14,4 @@ class Chien:
 
 rex = Chien(7, "Rex", "Berger Allemand")
 print(Chien.instances_chien)            # 1
-print(Chien.afficher_nombre_chiens())   # 1
+Chien.afficher_nombre_chiens()          # Il y a 1 chien instancié(s)
