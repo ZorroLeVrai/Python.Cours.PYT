@@ -1,6 +1,6 @@
 #action: Callable[[float], None]
 def calcul_puis_action(action):
-    resultat = 17+1
+    resultat = 17
     action(resultat)
 
 
