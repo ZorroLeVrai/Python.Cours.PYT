@@ -14,7 +14,7 @@ class WaterTank:
 
     @property
     def poids_total(self) -> float:
-        return self.poids_vide + self.capacite_max
+        return self.poids_vide + self.niveau_remplissage
 
     def remplir_citerne(self, nb_litres: float) -> float:
         """
