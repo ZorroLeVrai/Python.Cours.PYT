@@ -67,7 +67,7 @@ class Container:
         self.shapes.append(shape)
 
     def remove_shape(self, index: int) -> None:
-        del self[index]
+        del self.shapes[index]
 
     def perimeter(self) -> float:
         return reduce(lambda accumulator, current: accumulator + current.perimeter(), self.shapes, 0.0)
