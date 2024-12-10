@@ -1,8 +1,8 @@
 def inverser_chaine(text: str) -> str:
     chaine_inversee = ""
     longeur_chaine = len(text)
-    for index in range(longeur_chaine-1, -1, -1):
-        chaine_inversee += text[index]
+    for index in range(longeur_chaine):
+        chaine_inversee += text[longeur_chaine - index - 1]
 
     return chaine_inversee
 
