@@ -9,7 +9,7 @@ def inverser_chaine(text: str) -> str:
 def inverser_chaine_v2(text: str) -> str:
     chaine_inversee = ""
     longeur_chaine = len(text)
-    for index in range(-1, -1*longeur_chaine-1, -1):
+    for index in range(-1, -longeur_chaine-1, -1):
         chaine_inversee += text[index]
 
     return chaine_inversee
