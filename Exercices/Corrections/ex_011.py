@@ -23,9 +23,8 @@ def inverser_chaine_v4(text: str) -> str:
     return text[::-1]
 
 
-if __name__ == "__main__":
-    texte = "Bonjour"
-    print(inverser_chaine(texte))
-    print(inverser_chaine_v2(texte))
-    print(inverser_chaine_v3(texte))
-    print(inverser_chaine_v4(texte))
+texte = "Bonjour"
+print(inverser_chaine(texte))
+print(inverser_chaine_v2(texte))
+print(inverser_chaine_v3(texte))
+print(inverser_chaine_v4(texte))
