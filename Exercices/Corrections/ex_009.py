@@ -9,10 +9,10 @@ nb_nuits = 0
 while hauteur_actuelle_m < hauteur_cible_m:
     if en_journee:
         hauteur_actuelle_m += ascension_jour_m
-        nb_jours += 1
+        nb_jours += 1  # nb_jours = nb_jours + 1
     else:
         hauteur_actuelle_m -= glissement_nuit_m
-        nb_nuits += 1
+        nb_nuits += 1  # nb_nuits = nb_nuits + 1
 
     en_journee = not en_journee
 
