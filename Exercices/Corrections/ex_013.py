@@ -22,9 +22,8 @@ def fizz_buzz_v2(nombre_max: int) -> list[str]:
     return list(map(transformation_fizz_buzz, range(1, nombre_max+1)))
 
 
-if __name__ == "__main__":
-    print("Calcul FizzBuzz")
-    nb = int(input("Saisissez un nombre entre 1 et 100: "))
-    resultats = fizz_buzz_v2(nb)
-    for resultat in resultats:
-        print(resultat)
+print("Calcul FizzBuzz")
+nb = int(input("Saisissez un nombre entre 1 et 100: "))
+resultats = fizz_buzz(nb)
+for resultat in resultats:
+    print(resultat)
