@@ -21,6 +21,10 @@ def saisir_numero(message):
 
 def ajouter_contact():
     nom = input("Entrez le nom du contact: ")
+    if nom in annuaire_telephonique:
+        print(f"Le contact {nom} est déjà présent dans l'annuaire")
+        return
+
     numero_str = saisir_numero("Entrez le numéro du contact: ")
     if numero_str is None:
         return
