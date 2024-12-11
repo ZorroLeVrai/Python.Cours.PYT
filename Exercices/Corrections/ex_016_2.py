@@ -2,11 +2,16 @@ message_saisie = "Veuillez entrer une note entre 0 et 20 compris (une note néga
 
 def saisir_une_note() -> float:
     while True:
-        note = float(input(message_saisie))
-        if note > 20:
-            print("Veuillez saisir un nombre inférieur ou égal à 20")
-        else:
-            return note
+        note_str = input(message_saisie)
+        try:
+            note = float(note_str)
+            if note > 20:
+                print("Veuillez saisir un nombre inférieur ou égal à 20")
+            else:
+                return note
+        except ValueError:
+            print("Veuillez saisir un nombre entier ou un nombre décimal")
+
 
 def saisir_notes() -> tuple[float, float, float]:
     note_minimale: float = 20
