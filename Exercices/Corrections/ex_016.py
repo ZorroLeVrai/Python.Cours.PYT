@@ -1,12 +1,7 @@
 message_saisie = "Veuillez entrer une note entre 0 et 20 compris (une note négative stoppera la saisie): "
 
 def saisir_une_note() -> float:
-    while True:
-        note = float(input(message_saisie))
-        if note > 20:
-            print("Veuillez saisir un nombre inférieur ou égal à 20")
-        else:
-            return note
+    return float(input(message_saisie))
         
 def saisir_notes() -> list[float]:
     notes = []
