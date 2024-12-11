@@ -9,7 +9,7 @@ def ajouter_contact(nom: str, numero_str: str):
         print(f"Le contact {nom} est déjà présent dans l'annuaire")
         return
 
-    if numero_str is None:
+    if numero_str == "":
         print("Le numéro de téléphone doit être renseigné")
         return
     
@@ -20,7 +20,7 @@ def editer_contact(nom: str, numero_str: str):
     if nom not in annuaire_telephonique:
         print(f"Le contact {nom} n'est pas présent dans l'annuaire")
         return
-    if numero_str is None:
+    if numero_str == "":
         print("Le numéro de téléphone doit être renseigné")
         return
     
@@ -41,3 +41,14 @@ def rechercher_numero(nom: str):
         return
     
     print(f"Le numéro est: {annuaire_telephonique[nom]}")
+
+
+# Test
+ajouter_contact("Jean", "0123456789")
+ajouter_contact("Jane", "9876543210")
+ajouter_contact("John", "11111")
+
+editer_contact("Jane", "55555")
+
+print("Affichage des contacts:")
+afficher_contacts()
