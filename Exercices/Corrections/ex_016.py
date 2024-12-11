@@ -7,32 +7,18 @@ def saisir_une_note() -> float:
             print("Veuillez saisir un nombre inférieur ou égal à 20")
         else:
             return note
-
-def saisir_notes() -> tuple[float, float, float]:
-    note_minimale: float = 20
-    note_maximale: float = 0
-    somme_notes: float = 0
-    nb_notes: int = 0
-
+        
+def saisir_notes() -> list[float]:
+    notes = []
     while True:
         note = saisir_une_note()
         if note < 0:
             break
-
-        if note < note_minimale:
-            note_minimale = note
-
-        if note > note_maximale:
-            note_maximale = note
-        
-        somme_notes += note
-        nb_notes += 1
-
-    moyenne = somme_notes / nb_notes if nb_notes > 0 else 0
-    return (note_minimale, note_maximale, moyenne)
+        notes.append(note)
+    return notes
 
 
-(note_min, note_max, moyenne) = saisir_notes()
-print(f"La note minimale est de {note_min} / 20")
-print(f"La note maximale est de {note_max} / 20")
-print(f"La moyenne est de {moyenne} / 20")
+notes = saisir_notes()
+print(f"La note minimale est de {min(notes)} / 20")
+print(f"La note maximale est de {max(notes)} / 20")
+print(f"La moyenne est de {sum(notes) / len(notes)} / 20")
