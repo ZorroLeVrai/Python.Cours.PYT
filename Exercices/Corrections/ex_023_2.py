@@ -1,6 +1,8 @@
 class WaterTank:
     """Classe qui permet la gestion d'une citerne"""
 
+    total_volume = 0.0
+
     def __init__(self, poids_vide: float, capacite_max: float, niveau_remplissage: float):
         # Poids à vide en Kg
         self.poids_vide = poids_vide
@@ -8,8 +10,10 @@ class WaterTank:
         self.capacite_max = capacite_max
         # Niveau de remplissage de la citerne en litres
         self.niveau_remplissage = niveau_remplissage
+        WaterTank.total_volume += niveau_remplissage
 
-    def get_poids_total(self) -> float:
+    @property
+    def poids_total(self) -> float:
         return self.poids_vide + self.niveau_remplissage
 
     def remplir_citerne(self, nb_litres: float) -> float:
@@ -23,6 +27,7 @@ class WaterTank:
             else self.capacite_max - self.niveau_remplissage
 
         self.niveau_remplissage += nb_litres_ajoutes
+        WaterTank.total_volume += nb_litres_ajoutes
         return nb_litres_ajoutes
 
     def vider_citerne(self, nb_litres: float) -> float:
@@ -36,17 +41,21 @@ class WaterTank:
             else self.niveau_remplissage
 
         self.niveau_remplissage -= nb_litres_retires
+        WaterTank.total_volume -= nb_litres_retires
         return nb_litres_retires
 
 
 if __name__ == "__main__":
     citerne1 = WaterTank(100, 1000, 0)
     citerne2 = WaterTank(100, 1000, 0)
-    print("Citerne 1 poids:", citerne1.get_poids_total())
-    print("Citerne 2 poids:", citerne2.get_poids_total())
+    print(WaterTank.total_volume)
 
     citerne1.remplir_citerne(250)
     citerne2.remplir_citerne(500)
-    print("Citerne 1 poids:", citerne1.get_poids_total())
-    print("Citerne 2 poids:", citerne2.get_poids_total())
+    print(WaterTank.total_volume)
 
+    citerne1.vider_citerne(300)
+    citerne2.remplir_citerne(600)
+    print(WaterTank.total_volume)
+
+    print(f"Poids total: {citerne2.poids_total}")
