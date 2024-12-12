@@ -1,6 +1,7 @@
 class WaterTank:
     """Classe qui permet la gestion d'une citerne"""
 
+    #Constructeur
     def __init__(self, poids_vide: float, capacite_max: float, niveau_remplissage: float):
         # Poids à vide en Kg
         self.poids_vide = poids_vide
@@ -19,8 +20,13 @@ class WaterTank:
         nb_litres: Nombre de litres à ajouter
         returns: Nombre de litres réellement ajoutés
         """
-        nb_litres_ajoutes = nb_litres if self.niveau_remplissage + nb_litres <= self.capacite_max \
-            else self.capacite_max - self.niveau_remplissage
+        # nb_litres_ajoutes = nb_litres if self.niveau_remplissage + nb_litres <= self.capacite_max \
+        #     else self.capacite_max - self.niveau_remplissage
+
+        if self.niveau_remplissage + nb_litres <= self.capacite_max:
+            nb_litres_ajoutes = nb_litres
+        else:
+            nb_litres_ajoutes = self.capacite_max - self.niveau_remplissage
 
         self.niveau_remplissage += nb_litres_ajoutes
         return nb_litres_ajoutes
