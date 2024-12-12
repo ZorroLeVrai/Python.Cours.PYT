@@ -1,5 +1,6 @@
 """
 Sodoku Solver
+Utilisation du backtracking pour résoudre un sudoku
 """
 
 sudoku_grid = [[5,3,0,0,7,0,0,0,0],

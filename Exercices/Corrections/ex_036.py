@@ -1,5 +1,10 @@
 from itertools import combinations
 
+"""
+Le compte est bon
+Utilisation du backtracking pour trouver la solution la plus proche d'un nombre cible
+"""
+
 class Element:
     def __init__(self, valeur: int, infixe: str):
         self.valeur = valeur
