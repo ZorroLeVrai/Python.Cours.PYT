@@ -1,5 +1,20 @@
+"""
+Exercice 35: Créer une classe Personne avec les attributs suivants:
+- nom
+- prénom
+- numéro de téléphone
+- email
+"""
+
 class Personne:
+    """
+    Classe Personne
+    Contient les informations d'une personne
+    """
     def __init__(self, nom: str, prenom: str, numero_tel: str, email: str):
+        """
+        Constructeur de la classe Personne
+        """
         self.nom = nom
         self.prenom = prenom
         self.numero_tel = numero_tel
@@ -14,6 +29,10 @@ Email: {self.email}"""
 
 
 class Travailleur(Personne):
+    """
+    Classe Travailleur
+    Contient les informations d'un travailleur
+    """
     def __init__(self,
                  nom: str,
                  prenom: str,
