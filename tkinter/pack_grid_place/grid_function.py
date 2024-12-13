@@ -15,18 +15,18 @@ windowframe.columnconfigure(0, weight=1)
 windowframe.columnconfigure(1, weight=1)
 
 label = tk.Label(windowframe, text="Bonjour", font=font_style)
-label.grid(row=0, column=0)
+label.grid(row=0, column=0, sticky="nsew")
 
 # An entry is a textbox with a height of 1 (1 line)
 myentry = tk.Entry(windowframe)
-myentry.grid(row=0, column=1)
+myentry.grid(row=0, column=1, sticky="nsew")
 
 #Button widget
 button1 = tk.Button(windowframe, text="One", font=font_style)
-button1.grid(row=1, column=0)
+button1.grid(row=1, column=0, sticky="nsew")
 
 button2 = tk.Button(windowframe, text="Two", font=font_style)
-button2.grid(row=1, column=1)
+button2.grid(row=1, column=1, sticky="nsew")
 
 windowframe.pack(anchor="w")
 root.mainloop()
