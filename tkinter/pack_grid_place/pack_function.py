@@ -10,7 +10,7 @@ root.geometry(f"{WIDTH}x{HIGHT}")
 root.title(TITLE)
 
 label = tk.Label(root, text="Bonjour", font=font_style)
-label.pack()
+label.pack(padx=15, pady=15)
 
 # An entry is a textbox with a height of 1 (1 line)
 myentry = tk.Entry(root)

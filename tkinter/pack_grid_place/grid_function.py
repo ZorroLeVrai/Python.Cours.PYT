@@ -29,4 +29,5 @@ button2 = tk.Button(windowframe, text="Two", font=font_style)
 button2.grid(row=1, column=1, sticky="nsew")
 
 windowframe.pack(anchor="w")
+#windowframe.pack(fill='x')
 root.mainloop()
