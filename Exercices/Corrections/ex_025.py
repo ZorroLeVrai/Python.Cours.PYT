@@ -1,5 +1,5 @@
 """
-Exercice 35: Créer une classe Personne avec les attributs suivants:
+Exercice 25: Créer une classe Personne avec les attributs suivants:
 - nom
 - prénom
 - numéro de téléphone
