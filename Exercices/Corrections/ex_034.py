@@ -6,7 +6,7 @@ import glob
 
 
 # Spécifiez le répertoire où chercher les fichiers
-REPERTOIRE_SOURCE = r"..\Repertoire"
+REPERTOIRE_SOURCE = r"D:\Users\amine\Documents\GitHub\Python.Cours.PYT\Exercices\Repertoire"
 # Spécifiez le format des fichiers à inclure
 FORMAT_FICHIERS_SOURCE = "test_*.py"
 REPERTOIRE_CIBLE = "tests"
@@ -34,6 +34,8 @@ def deplacer_fichier_dans_tests(file_paths: list[str], target_dir: str) -> None:
 
 
 # Utiliser glob pour trouver tous les fichiers correspondant au modèle "villes_*.csv"
-fichiers_a_deplacer = glob.glob(os.path.join(REPERTOIRE_SOURCE, FORMAT_FICHIERS_SOURCE))
+# fichier_a_deplace = glob.glob("..\Repertoire\test_*.py")
+format_fichier_a_deplacer = os.path.join(REPERTOIRE_SOURCE, FORMAT_FICHIERS_SOURCE)
+fichiers_a_deplacer = glob.glob(format_fichier_a_deplacer)
 
 deplacer_fichier_dans_tests(fichiers_a_deplacer, REPERTOIRE_CIBLE)
